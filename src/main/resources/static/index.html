@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Page Header -->
+        <header>
+            <h1>Weather Finder</h1>
+            <p>Check the current weather in major Canadian cities.</p>
+        </header>
+
+
+        <!-- City Selection -->
+        <section class="city-search">
+
+            <h2>Select a City</h2>
+
+            <div class="search-controls">
+
+                <select id="city-select">
+                    <option value="">Choose a city</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Montreal">Montreal</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Edmonton">Edmonton</option>
+                    <option value="Ottawa">Ottawa</option>
+                    <option value="Winnipeg">Winnipeg</option>
+                    <option value="Maple Ridge">Maple Ridge</option>
+                    <option value="Halifax">Halifax</option>
+                    <option value="Victoria">Victoria</option>
+                </select>
+
+                <button id="view-city-btn">
+                    View City
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Loading Message -->
+        <p id="loading"></p>
+
+
+        <!-- Error Message -->
+        <p id="error-message"></p>
+
+
+        <!-- Current Weather -->
+        <section class="weather-section">
+
+            <h2>Current Weather</h2>
+
+            <div id="weather-display" class="weather-card">
+
+                <h3 id="weather-city">
+                    Select a city to view its weather
+                </h3>
+
+                <div class="weather-info">
+
+                    <div class="weather-item">
+                        <p>Temperature</p>
+                        <span id="temperature">--</span>
+                    </div>
+
+                    <div class="weather-item">
+                        <p>Wind</p>
+                        <span id="wind">--</span>
+                    </div>
+
+                    <div class="weather-item">
+                        <p>Humidity</p>
+                        <span id="humidity">--</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Top 10 Cities -->
+        <section class="top-cities">
+
+            <h2>Top 10 Canadian Cities</h2>
+
+            <div class="city-list">
+
+                <button class="city-btn" data-city="Vancouver">Vancouver</button>
+                <button class="city-btn" data-city="Toronto">Toronto</button>
+                <button class="city-btn" data-city="Montreal">Montreal</button>
+                <button class="city-btn" data-city="Calgary">Calgary</button>
+                <button class="city-btn" data-city="Edmonton">Edmonton</button>
+                <button class="city-btn" data-city="Ottawa">Ottawa</button>
+                <button class="city-btn" data-city="Winnipeg">Winnipeg</button>
+                <button class="city-btn" data-city="Maple Ridge">Maple Ridge</button>
+                <button class="city-btn" data-city="Halifax">Halifax</button>
+                <button class="city-btn" data-city="Victoria">Victoria</button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>

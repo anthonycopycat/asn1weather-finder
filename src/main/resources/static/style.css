@@ -1,0 +1,90 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+}
+
+.city-search {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+select {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.weather-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.weather-card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.weather-item {
+    text-align: center;
+}
+
+.top-cities {
+    text-align: center;
+}
+
+.city-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.city-btn {
+    background-color: white;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.city-btn:hover {
+    background-color: #e6e6e6;
+}
+
+#loading {
+    text-align: center;
+    color: blue;
+}
+
+#error-message {
+    text-align: center;
+    color: red;
+}
