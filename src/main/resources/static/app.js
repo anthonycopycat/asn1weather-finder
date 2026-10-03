@@ -78,7 +78,6 @@ async function getWeather(city) {
 
 // Display weather
 function renderWeather(city, weather) {
-
     weatherCity.textContent = city;
 
     temperature.textContent =
