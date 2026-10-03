@@ -11,12 +11,25 @@ const loading = document.getElementById("loading");
 const errorMessage = document.getElementById("error-message");
 
 
+<<<<<<< HEAD
+// View City button
+viewCityBtn.addEventListener("click", function () {
+    const city = citySelect.value;
+
+    if (city === "") {
+        errorMessage.textContent = "Please select a city.";
+        return;
+    }
+
+    getWeather(city);
+=======
 // Top 10 city buttons
 cityButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         const city = button.getAttribute("data-city");
         getWeather(city);
     });
+>>>>>>> main
 });
 
 
@@ -78,7 +91,12 @@ async function getWeather(city) {
 
 // Display weather
 function renderWeather(city, weather) {
+<<<<<<< HEAD
+
+    weatherCity.textContent = "Weather in " + city;
+=======
     weatherCity.textContent = city;
+>>>>>>> main
 
     temperature.textContent =
         weather.temperature_2m + " °C";
