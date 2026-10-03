@@ -11,19 +11,6 @@ const loading = document.getElementById("loading");
 const errorMessage = document.getElementById("error-message");
 
 
-// View City button
-viewCityBtn.addEventListener("click", function () {
-    const city = citySelect.value;
-
-    if (city === "") {
-        errorMessage.textContent = "Please select a city.";
-        return;
-    }
-
-    getWeather(city);
-});
-
-
 // Top 10 city buttons
 cityButtons.forEach(function (button) {
     button.addEventListener("click", function () {
@@ -41,7 +28,6 @@ async function getWeather(city) {
         errorMessage.textContent = "";
         loading.textContent = "Loading weather...";
 
-        // Find the latitude and longitude of the city
         const geoResponse = await fetch(
             "https://geocoding-api.open-meteo.com/v1/search?name=" +
             encodeURIComponent(city) +
@@ -62,8 +48,6 @@ async function getWeather(city) {
         const longitude = geoData.results[0].longitude;
         const cityName = geoData.results[0].name;
 
-
-        // Get current weather
         const weatherResponse = await fetch(
             "https://api.open-meteo.com/v1/forecast?latitude=" +
             latitude +
@@ -92,7 +76,7 @@ async function getWeather(city) {
 }
 
 
-// Display the weather on the page
+// Display weather
 function renderWeather(city, weather) {
 
     weatherCity.textContent = city;
